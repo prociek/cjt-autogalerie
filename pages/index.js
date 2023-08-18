@@ -1,4 +1,6 @@
 import Head from "next/head";
+import Image from "next/image";
+
 import { Inter } from "next/font/google";
 
 import styles from "@/styles/Home.module.css";
@@ -17,8 +19,24 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div
+        style={{
+          position: "fixed",
+          width: "100vw",
+          height: "100vh",
+          zIndex: -1,
+        }}
+      >
+        <Image
+          src="/images/car.jpg"
+          alt="bmw"
+          objectFit="cover"
+          layout="fill"
+        />
+      </div>
       <main className={`${styles.main} ${inter.className}`}>
-        <h1>Main page</h1>
+        <h1>CJT AUTOGALERIE</h1>
+        <p>Dein Autoverkäufer</p>
       </main>
     </>
   );

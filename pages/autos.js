@@ -1,14 +1,15 @@
-import React from "react";
-
+import Card from "../components/card";
 import { getAllCars } from "../utils/api";
+
+import classes from "./autos.module.css";
 
 const Autos = ({ cars }) => {
   return (
-    <div>
+    <ul className={classes["autos-list"]}>
       {cars.map((car) => (
-        <li key={car.id}>{car.marke}</li>
+        <Card key={car.id} {...car} />
       ))}
-    </div>
+    </ul>
   );
 };
 

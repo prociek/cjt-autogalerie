@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 
-import classes from "./add-auto.module.css";
+import classes from "./neue-auto.module.css";
 
 const AddAuto = () => {
   const [marke, setMarke] = useState("");
   const [modell, setModell] = useState("");
   const [baujahr, setBaujahr] = useState("");
-  const [image, setImage] = useState("");
+  const [preis, setPreis] = useState("");
+  const [image, setImage] = useState("/images/m.jpg");
   function onSubmitHandler(e) {
     e.preventDefault();
     fetch("/api/backend/add-auto", {
@@ -14,7 +15,7 @@ const AddAuto = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ marke, modell, baujahr, image }),
+      body: JSON.stringify({ marke, modell, baujahr, image, preis }),
     });
   }
 
@@ -25,6 +26,7 @@ const AddAuto = () => {
         <input
           onChange={(e) => setMarke(e.target.value)}
           type="text"
+          placeholder="Marke"
           id="marke"
         />
       </div>
@@ -34,6 +36,7 @@ const AddAuto = () => {
         <input
           onChange={(e) => setModell(e.target.value)}
           type="text"
+          placeholder="Modell"
           id="model"
         />
       </div>
@@ -48,10 +51,22 @@ const AddAuto = () => {
       </div>
 
       <div className="form-control">
+        <label htmlFor="preis">preis</label>
+        <input
+          onChange={(e) => setPreis(e.target.value)}
+          type="number"
+          step="0.01"
+          placeholder="0.00"
+          id="preis"
+        />
+      </div>
+
+      <div className="form-control">
         <label htmlFor="image">Image</label>
         <input
           onChange={(e) => setImage(e.target.value)}
-          type="image"
+          type="file"
+          accept="image/*"
           id="image"
         />
       </div>

@@ -1,10 +1,14 @@
-import React from "react";
+import Link from "next/link";
 
 const Menu = () => {
   return (
     <ul>
-      <li>neue auto</li>
-      <li>neue image</li>
+      <li>
+        <Link href="/backend/neue-auto">Neue Auto</Link>
+      </li>
+      <li>
+        <Link href="/backend/neue-slider">Neue Slider</Link>
+      </li>
     </ul>
   );
 };

@@ -10,15 +10,29 @@ const Navigation = () => {
         <h1>Logo</h1>
       </Link>
       <ul className={classes.list}>
-        <Link className={classes.link} href="/autos">
-          <li>Autos</li>
-        </Link>
-        <Link className={classes.link} href="/impressum">
-          <li>Imprssum</li>
-        </Link>
-        <Link className={classes.link} href="/kontakt">
-          <li>Kontakt</li>
-        </Link>
+        <li>
+          <Link className={classes.link} href="/autos">
+            Autos
+          </Link>
+        </li>
+
+        <li>
+          <Link className={classes.link} href="/impressum">
+            Imprssum
+          </Link>
+        </li>
+
+        <li>
+          <Link className={classes.link} href="/leistungen">
+            Leistungen
+          </Link>
+        </li>
+
+        <li>
+          <Link className={classes.link} href="/kontakt">
+            Kontakt
+          </Link>
+        </li>
       </ul>
     </nav>
   );

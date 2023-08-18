@@ -1,0 +1,13 @@
+.form {
+  background-color: white;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.form label {
+  display: block;
+}

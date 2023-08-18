@@ -1,5 +1,3 @@
-import React from "react";
-
 import Menu from "../../components/backend/menu";
 
 const Backend = () => {

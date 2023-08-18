@@ -1,7 +1,5 @@
-import React from "react";
-
 const Kontakt = () => {
-  return <div>kontakt</div>;
+  return <div>Kontakt</div>;
 };
 
 export default Kontakt;
