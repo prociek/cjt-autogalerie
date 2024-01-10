@@ -8,6 +8,7 @@ export default function handler(req, res) {
         "Content-Type": "application/json",
       },
     }
-  );
-  // res.stauts(201).json({message: "done"})
+  )
+  .catch(err => console.log(err));
+  res.status(201).json({message: "done"})
 }

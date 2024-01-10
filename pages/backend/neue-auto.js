@@ -10,13 +10,16 @@ const AddAuto = () => {
   const [image, setImage] = useState("/images/m.jpg");
   function onSubmitHandler(e) {
     e.preventDefault();
-    fetch("/api/backend/add-auto", {
+    fetch("/api/backend/neue-auto", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ marke, modell, baujahr, image, preis }),
-    });
+    })
+    .then(res => res.json())
+    .then(data => console.log(data.message))
+    .catch(err => console.log(err));
   }
 
   return (
