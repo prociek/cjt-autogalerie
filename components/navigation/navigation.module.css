@@ -3,17 +3,36 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
+  height: 3.75rem;
   background-color: rgba(0, 0, 0, 0.5);
   color: var(--color-primary);
 }
 
+.navigation .toggle {
+  background-color: transparent;
+  border: none;
+  color: var(--color-primary);
+}
+
+.navigation .toggle > * {
+  width: 2rem;
+  height: 2rem;
+}
+
 .list {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1rem;
   list-style: none;
+  position: absolute;
+  top: 3.75rem;
+  right: 0;
+  padding: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-.link {
+.link .active {
+  text-decoration: underline;
 }

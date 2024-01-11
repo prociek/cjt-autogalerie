@@ -1,17 +1,16 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
-import classes from "./neue-auto.module.css";
+import classes from "./kaufen.module.css";
 
-const AddAuto = () => {
+const Kaufen = () => {
   const [marke, setMarke] = useState("");
   const [modell, setModell] = useState("");
   const [baujahr, setBaujahr] = useState("");
   const [preis, setPreis] = useState("");
   const [image, setImage] = useState("/images/m.jpg");
-
   function onSubmitHandler(e) {
     e.preventDefault();
-    fetch("/api/backend/neue-auto", {
+    fetch("/api/backend/kaufen", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -22,7 +21,6 @@ const AddAuto = () => {
       .then((data) => console.log(data.message))
       .catch((err) => console.log(err));
   }
-
   return (
     <form className={classes.form} onSubmit={onSubmitHandler}>
       <div className="form-control">
@@ -66,18 +64,17 @@ const AddAuto = () => {
       </div>
 
       <div className="form-control">
-        <label htmlFor="image">Bild</label>
+        <label htmlFor="image">Image</label>
         <input
           onChange={(e) => setImage(e.target.value)}
-          name="bild"
           type="file"
           accept="image/*"
           id="image"
         />
       </div>
-      <button>Speichern</button>
+      <button>submit</button>
     </form>
   );
 };
 
-export default AddAuto;
+export default Kaufen;

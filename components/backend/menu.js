@@ -7,7 +7,7 @@ const Menu = () => {
         <Link href="/backend/neue-auto">Neue Auto</Link>
       </li>
       <li>
-        <Link href="/backend/neue-slider">Neue Slider</Link>
+        <Link href="/backend/kaufen">Kaufen</Link>
       </li>
     </ul>
   );

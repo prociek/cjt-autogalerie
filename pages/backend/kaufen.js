@@ -1,13 +1,14 @@
 import AutosList from "@/components/autosList";
-import React from "react";
-import { getAllCars } from "../utils/api";
+import { getAllCars } from "../../utils/api";
 
-const Autos = ({ cars }) => {
+const Kaufen = ({ cars }) => {
   return <AutosList cars={cars} />;
 };
 
+export default Kaufen;
+
 export async function getStaticProps() {
-  const cars = await getAllCars("autos");
+  const cars = await getAllCars("kaufen");
 
   return {
     props: {
@@ -15,4 +16,3 @@ export async function getStaticProps() {
     },
   };
 }
-export default Autos;

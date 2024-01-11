@@ -1,6 +1,6 @@
-export async function getAllCars() {
+export async function getAllCars(path) {
   const response = await fetch(
-    "https://cjt-autogalerie-default-rtdb.europe-west1.firebasedatabase.app/autos.json"
+    `https://cjt-autogalerie-default-rtdb.europe-west1.firebasedatabase.app/${path}.json`
   );
   const data = await response.json();
 

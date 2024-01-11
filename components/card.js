@@ -6,13 +6,18 @@ const Card = ({ image, marke, modell, baujahr, preis }) => {
   return (
     <li className={classes.card}>
       <div>
-      <Image src={image} alt={marke + modell} width={640} height={212} />
-
+        <Image src={image} alt={marke + modell} width={640} height={212} />
       </div>
-      <div>
+      <div className={classes.details}>
         <h2>{marke + " " + modell}</h2>
-        <time>{baujahr}</time>
-        <span className={classes.preis}>{preis}</span>
+        <div>
+          Baujahr:<time> {baujahr}</time>
+        </div>
+        <div>
+          {" "}
+          Preis:
+          <span className={classes.preis}> {preis}</span>
+        </div>
       </div>
     </li>
   );
